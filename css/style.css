@@ -1,0 +1,130 @@
+body {
+    color: black;
+    font-family: arial,Verdana,sans-serif;
+    font-size: 0.8em;
+    line-height: 1.9em;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    margin: auto;
+    position: relative;
+    width: 790px;
+}
+
+.top {
+    background-color: #404040;
+    background-image: url("../images/stripes.png");
+    border-bottom: 3px solid #333333;
+    border-top: 3px solid #333333;
+    box-shadow: 3px 3px 75px #050505 inset;
+    padding: 20px 0;
+}
+
+.top h1 {
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 1px #000000;
+    color: #EEEEEE;
+}
+
+#left {
+    width:300px;
+}
+
+#right {
+    position:absolute;
+    border-left:1px solid #AAA;
+    border-bottom:1px solid #AAA;
+}
+
+#tabs {
+    background: url("../images/spacer.gif");
+}
+#tabs_ul {
+    background: url("../images/spacer.gif");
+    border: none;
+	padding-bottom:10px;
+}
+#tabs-1 {
+    border-top: solid 5px;
+    padding: 5px 0px 0px 0px;
+}
+#tabs-2 {
+    border-top: solid 5px;
+    padding: 5px 0px 0px 0px;
+}
+#tabs-3 {
+    border-top: solid 5px;
+    padding: 5px 0px 0px 0px;
+}
+
+#dateButtons .ui-selecting, #dateEQ .ui-selecting, #dateTP .ui-selecting {
+    background: #FECA40;
+}
+#dateButtons .ui-selected, #dateEQ .ui-selected, #dateTP .ui-selected {
+    background: #F39814;
+    color: white;
+}
+#dateButtons, #dateEQ, #dateTP {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+}
+#dateButtons li, #dateEQ li, #dateTP li {
+    margin: 3px;
+    padding: 0.4em;
+    font-size: 1.4em;
+    height: 18px;
+}
+
+.srchbox {
+    height: 80px;
+    line-height: 40px;
+    border-bottom: 1px solid;
+    background-color:#d6ead1;
+}
+
+.srchbox_label {
+    margin-left: 2px;
+    font-size: 20px;
+}
+
+#addrsrch_box {
+    height: 40px;
+    float: left;
+    margin-left: 2px;
+}
+
+.srch_btn {
+    margin-left: 4px;
+    margin-top: 5px;
+}
+
+#nearsrch_label {
+    float: left;
+    margin-left: 2px;
+}
+
+#legend {
+    height: 100px;
+}
+
+.sub_box {
+    float: left;
+    margin-left: 2px;
+}
+
+#route2 {
+    border-bottom: none;
+    line-height: 40px;
+    background-color:#ebebeb;
+}
+
+#storelist, #route_result {
+    height: 350px;
+    overflow: auto;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Store Locator　Application</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("maps","3", {"other_params":"&key=AIzaSyByL2OAfROjNoihtpSF75MchKfkQSzU-kY&language=en&libraries=places,geometry"});
+    google.load("jquery", "1.7.1");
+    google.load("jqueryui", "1.8.16");
+  </script>
+  <script type="text/javascript" src="js/storelocator.js"></script>
+  <script type="text/javascript">
+    google.setOnLoadCallback(initialize);
+  </script>
+</head>
+<body>
+  <div class="top">
+    <div class="main" style="width:97%;">
+      <h1>Store Locator Application</h1>
+    </div><!-- /main -->
+  </div><!-- /top -->
+  <div style="position:relative;">
+    <div id="left">
+      <div id="tabs">
+        <ul id="tabs_ul">
+          <li><a href="#tabs-1" id="tab1_label">Store Locator</a></li>
+        </ul>
+        <div id="tabs-1">
+          <div id="curpos_search" class="srchbox">
+            <div id="curpos_label" class="srchbox_label">Get current location</div>
+            <input type="submit" id="curpos_btn" class="srch_btn" value="Move to current location"/>
+          </div>
+          <div id="addr_search" class="srchbox">
+            <div id="addrsrch_label" class="srchbox_label">Move to address</div>
+            <div id="addrsrch_box"><input type="text" size="20" id="txtAdd" name="txtAdd" placeholder="Input address here"/></div>
+            <input placeholder="Input address" type="submit" id="addrsrch_btn" class="srch_btn" value="Move"/>
+          </div>
+          <div id="cust_search" class="srchbox">
+            <div id="custsrch_label" class="srchbox_label">Store search from map center</div>
+            <select id="radiusSelect">
+              <option value="200" selected>200m</option>
+              <option value="500">500m</option>
+              <option value="1000">1km</option>
+            </select>
+            <input type="submit" id="nearsrch_btn" class="srch_btn" value="Search"/>
+            <input type="submit" id="nearclear_btn" class="clear_btn" value="Clear"/>
+            <input type="submit" id="allsrch_btn" class="srch_btn" value="Show all"/>
+          </div>
+          <div id="curpos_set" class="srchbox">
+            <div id="curpos_setlabel" class="srchbox_label">Set user position (right click)</div>
+            <input type="submit" id="curposclear_btn" class="clear_btn" value="Clear user position"/>
+          </div>
+          <div id="route_search" class="srchbox">
+            <div id="route_searchlabel" class="srchbox_label">Route</div>
+            <input type="submit" id="routeclear_btn" class="clear_btn" value="Clear route"/>
+          </div>
+
+          <ul id="storelist">
+          </ul>
+          <div id="route_result">
+          </div>
+        </div><!-- /tabs-1 -->
+      </div><!-- /tabs -->
+    </div><!-- /left -->
+    <div id="right">
+    </div><!-- /right -->
+  </div><!-- /main -->
+</body>
+</html>
